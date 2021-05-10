@@ -3,13 +3,10 @@ import React from 'react';
 class SearchBar extends React.Component {
   state = {term: ''}
 
-  onInputChange = (e) => {
-    this.setState({term: e.target.value})
-  }
-
   onFormSubmit = (e) => {
     e.preventDefault()
-    this.props.onSubmit(this.state.term)
+    // the function below as props from parent component
+    this.props.onFormSubmit(this.state.term)
   }
 
   render() {
@@ -18,7 +15,7 @@ class SearchBar extends React.Component {
         <form className='ui form' onSubmit={this.onFormSubmit}>
           <div className='field'>
             <label htmlFor=''>Video Search</label>
-            <input type='text' onChange={(e) => this.setState({term: e.target.value})} value={this.state.term}/>
+            <input type='text' value={this.state.term} onChange={(e) => this.setState({term: e.target.value})} />
           </div>
         </form>
       </div>
