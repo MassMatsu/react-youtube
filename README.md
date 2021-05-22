@@ -1,9 +1,10 @@
 ##### youtube video browser
-It is a very simple application to search video movie on youtube
+It is a very simple application to search video movies on youtube and play it
 
 ##### features
 - [x] React
 - [x] youtube api
+- [x] iframe video player
 - [x] css framework semantic ui
  
 
